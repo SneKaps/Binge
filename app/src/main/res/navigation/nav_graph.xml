@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/movieFeedFragment">
+
+    <fragment
+        android:id="@+id/movieFeedFragment"
+        android:name="com.example.binge.ui.fragments.feed.MovieFeedFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_movie_feed" >
+        <action
+            android:id="@+id/actionDetailFragment"
+            app:destination="@id/detailMovieFragment"
+            app:popUpTo="@id/movieFeedFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailMovieFragment"
+        android:label=""
+        android:name="com.example.binge.ui.fragments.movie.DetailMovieFragment"
+        tools:layout="@layout/fragment_detail_movie">
+        <argument
+            android:name="currentMovie"
+            app:argType="com.example.binge.model.data.Movies"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+</navigation>
