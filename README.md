@@ -38,4 +38,4 @@ This project follows the famous MVVM architecture and best practices from Google
 
 ## Author ✍️
 
-- anshul3pathi
+- SneKaps
